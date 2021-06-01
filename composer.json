@@ -45,6 +45,6 @@
         "phpunit/phpunit": "^9.5"
     },
     "require": {
-
+        "statamic/cms": "^3"
     }
 }
