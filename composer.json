@@ -1,0 +1,19 @@
+{
+    "name": "raynl/generate-slug",
+    "autoload": {
+        "psr-4": {
+            "Raynl\\GenerateSlug\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Generate Slug",
+            "description": "Generate Slug addon"
+        },
+        "laravel": {
+            "providers": [
+                "Raynl\\GenerateSlug\\ServiceProvider"
+            ]
+        }
+    }
+}
