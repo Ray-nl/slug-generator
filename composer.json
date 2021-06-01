@@ -1,9 +1,33 @@
 {
     "name": "raynl/generate-slug",
+    "description": "Generate a unique slug on a collection",
+    "keywords": [
+        "raynl",
+        "laravel",
+        "generate slug"
+    ],
+    "homepage": "https://github.com/Ray-nl/slug-generator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rolin Bos",
+            "email": "rolin@ray.nl",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Raynl\\GenerateSlug\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Raynl\\Generateslug\\Tests\\": "tests"
+        },
+        "classmap": [
+            "tests/TestCase.php"
+        ]
     },
     "extra": {
         "statamic": {
@@ -15,5 +39,12 @@
                 "Raynl\\GenerateSlug\\ServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.18",
+        "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+        "statamic/cms": "3.1.x-dev"
     }
 }
