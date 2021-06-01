@@ -2,15 +2,15 @@
 
 namespace Raynl\Generateslug\Tests;
 
-use Raynl\GenerateSlug\ServiceProvider;
-use Statamic\Facades\Entry;
-use Statamic\Facades\Collection;
-use Statamic\Extend\Manifest;
+use Illuminate\Foundation\Testing\WithFaker;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
+use Raynl\GenerateSlug\ServiceProvider;
+use Statamic\Extend\Manifest;
+use Statamic\Facades\Collection;
+use Statamic\Facades\Entry;
+use Statamic\Facades\User;
 use Statamic\Providers\StatamicServiceProvider;
 use Statamic\Statamic;
-use Statamic\Facades\User;
-use Illuminate\Foundation\Testing\WithFaker;
 
 abstract class TestCase extends OrchestraTestCase
 {
@@ -20,7 +20,7 @@ abstract class TestCase extends OrchestraTestCase
     {
         return [
             StatamicServiceProvider::class,
-            ServiceProvider::class
+            ServiceProvider::class,
         ];
     }
 
@@ -53,7 +53,7 @@ abstract class TestCase extends OrchestraTestCase
 
         $configs = [
             'assets', 'cp', 'forms', 'static_caching',
-            'sites', 'stache', 'system', 'users'
+            'sites', 'stache', 'system', 'users',
         ];
 
         foreach ($configs as $config) {

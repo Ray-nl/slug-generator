@@ -2,11 +2,8 @@
 
 namespace Tests\Unit;
 
-
-
 use Raynl\GenerateSlug\Slug;
 use Raynl\Generateslug\Tests\TestCase;
-use Statamic\Facades\Entry;
 
 class ExampleTest extends TestCase
 {
