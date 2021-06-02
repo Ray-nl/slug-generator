@@ -23,18 +23,11 @@ class Slug
         $slug = \Str::slug($slug, '-');
 
         if (Entry::query()->where('collection', $collection)->where('slug', $slug)->first()) {
-            $slug .= $seperator.'1';
-            $number = $start_number;
-            while (Entry::query()->where('collection', $collection)->where('slug', $slug)->first()) {
-                $explode = explode($seperator, $slug);
-
-                $last = array_key_last($explode);
-                $explode[$last] = (string)$number;
-
-                $slug = implode('-', $explode);
-
-                $number = (int)end($explode) + 1;
-            }
+            $baseSlug = $slug;
+            do {
+                $slug = $baseSlug.$seperator.$start_number;
+                $start_number++;
+            } while (Entry::query()->where('collection', $collection)->where('slug', $slug)->first());
         }
 
         return $slug;
