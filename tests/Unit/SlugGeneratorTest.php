@@ -7,7 +7,6 @@ use Raynl\Generateslug\Tests\TestCase;
 
 class SlugGeneratorTest extends TestCase
 {
-
     /**
      * Slug generator with standard separator and start number
      */
