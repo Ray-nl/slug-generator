@@ -23,7 +23,7 @@ class Slug
         $slug = \Str::slug($slug, '-');
 
         if (Entry::query()->where('collection', $collection)->where('slug', $slug)->first()) {
-            $slug .= $seperator.'1';
+            $slug .= $seperator.''.$start_number;
             $number = $start_number;
             while (Entry::query()->where('collection', $collection)->where('slug', $slug)->first()) {
                 $explode = explode($seperator, $slug);
