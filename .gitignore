@@ -1,3 +1,6 @@
 /vendor
 composer.lock
 /tests/__fixtures__/content/collections/*.yaml
+/tests/__fixtures__/content/collections/products/*.md
+.php-cs-fixer.cache
+.phpunit.result.cache
